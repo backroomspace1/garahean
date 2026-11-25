@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+._*
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+*.pem
+*.key
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Deploy tool folders
+.netlify/
+.vercel/
+
+# Dependencies and logs (in case tooling is added later)
+node_modules/
+*.log
+
+# Astro
+dist/
+.astro/

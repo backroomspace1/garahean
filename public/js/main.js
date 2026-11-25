@@ -1,0 +1,1 @@
+document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const l=document.getElementById('lb');l.querySelector('img').src=a.href;l.classList.add('open')}));document.getElementById('lb').addEventListener('click',e=>e.currentTarget.classList.remove('open'));

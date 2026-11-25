@@ -1,0 +1,32 @@
+---
+interface Props { title: string; description: string; path: string; ogImage: string; current: string; }
+const { title, description, path, ogImage, current } = Astro.props;
+const site = "https://garahean.brspl.fyi";
+const canonical = new URL(path, site).href;
+const ld = {"@context":"https://schema.org","@type":"Restaurant","name":"Garahean Diners","url":"https://garahean.brspl.fyi/","telephone":"+639471996525","servesCuisine":"Filipino","image":"https://garahean.brspl.fyi/images/hero-buffet-spread.webp","address":{"@type":"PostalAddress","streetAddress":"Nueva Street, Brgy. 11","addressLocality":"Bacolod City","postalCode":"6100","addressCountry":"PH"},"sameAs":["https://www.facebook.com/garahean/"]};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title><meta name="description" content={description}><link rel="canonical" href={canonical}>
+<meta property="og:type" content="website"><meta property="og:title" content={title}><meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}><meta property="og:image" content={`${site}/images/${ogImage}.webp`}>
+<link rel="icon" href="images/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json" set:html={JSON.stringify(ld)}></script>
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img src="images/garahean-logo.webp" alt="Garahean Diners logo" width="64" height="64"><span class="brand-name">Garahean Diners</span></a>
+<input type="checkbox" id="navtoggle"><label for="navtoggle" class="burger" aria-label="Open menu">&#9776;</label>
+<ul class="nav"><li><a href="index.html" aria-current={current === "index" ? "page" : undefined} class:list={[{ active: current === "index" }]}>Home</a></li><li><a href="about.html" aria-current={current === "about" ? "page" : undefined} class:list={[{ active: current === "about" }]}>About</a></li><li><a href="menu.html" aria-current={current === "menu" ? "page" : undefined} class:list={[{ active: current === "menu" }]}>Menu</a></li><li><a href="gallery.html" aria-current={current === "gallery" ? "page" : undefined} class:list={[{ active: current === "gallery" }]}>Gallery</a></li><li><a href="contact.html" aria-current={current === "contact" ? "page" : undefined} class:list={[{ active: current === "contact" }]}>Contact</a></li></ul><a class="btn btn-gold header-call" href="tel:+639471996525"><i class="fas fa-phone"></i> Call 0947 199 6525</a></div></header><main>
+<slot />
+</main><footer class="site-footer"><div class="wrap top"><div><img src="images/garahean-logo.webp" alt="" width="90" height="90" style="margin:0 auto 0 0" class="flogo"><p class="brand-name">Garahean Diners</p><p>Always serving up something delicious. Home-style Filipino cooking and our famous mixed fruits in Bacolod City.</p></div>
+<div><h4>Visit us</h4><ul class="info"><li><i class="fas fa-map-marker-alt"></i><span>Nueva Street, Brgy. 11, Bacolod City, Philippines 6100</span></li><li><i class="fas fa-phone"></i><a href="tel:+639471996525">0947 199 6525</a></li><li><i class="fab fa-facebook-messenger"></i><a href="https://m.me/garahean" target="_blank" rel="noopener">Message us on Messenger</a></li></ul></div>
+<div><h4>Follow us</h4><div class="social"><a href="https://www.facebook.com/garahean/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://m.me/garahean" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a></div><p style="margin-top:16px">Dine-in · In-store pickup · Party trays</p></div></div>
+<div class="copy">© Garahean Diners. All rights reserved. · garahean.brspl.fyi</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script is:inline src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://garahean.brspl.fyi/sitemap.xml
