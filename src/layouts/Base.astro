@@ -1,9 +1,9 @@
 ---
 interface Props { title: string; description: string; path: string; ogImage: string; current: string; }
 const { title, description, path, ogImage, current } = Astro.props;
-const site = "https://garahean.brspl.fyi";
+const site = "https://garahean.bacolod.fyi";
 const canonical = new URL(path, site).href;
-const ld = {"@context":"https://schema.org","@type":"Restaurant","name":"Garahean Diners","url":"https://garahean.brspl.fyi/","telephone":"+639471996525","servesCuisine":"Filipino","image":"https://garahean.brspl.fyi/images/hero-buffet-spread.webp","address":{"@type":"PostalAddress","streetAddress":"Nueva Street, Brgy. 11","addressLocality":"Bacolod City","postalCode":"6100","addressCountry":"PH"},"sameAs":["https://www.facebook.com/garahean/"]};
+const ld = {"@context":"https://schema.org","@type":"Restaurant","name":"Garahean Diners","url":"https://garahean.bacolod.fyi/","telephone":"+639471996525","servesCuisine":"Filipino","image":"https://garahean.bacolod.fyi/images/hero-buffet-spread.webp","address":{"@type":"PostalAddress","streetAddress":"Nueva Street, Brgy. 11","addressLocality":"Bacolod City","postalCode":"6100","addressCountry":"PH"},"sameAs":["https://www.facebook.com/garahean/"]};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ const ld = {"@context":"https://schema.org","@type":"Restaurant","name":"Garahea
 </main><footer class="site-footer"><div class="wrap top"><div><img src="images/garahean-logo.webp" alt="" width="90" height="90" style="margin:0 auto 0 0" class="flogo"><p class="brand-name">Garahean Diners</p><p>Always serving up something delicious. Home-style Filipino cooking and our famous mixed fruits in Bacolod City.</p></div>
 <div><h4>Visit us</h4><ul class="info"><li><i class="fas fa-map-marker-alt"></i><span>Nueva Street, Brgy. 11, Bacolod City, Philippines 6100</span></li><li><i class="fas fa-phone"></i><a href="tel:+639471996525">0947 199 6525</a></li><li><i class="fab fa-facebook-messenger"></i><a href="https://m.me/garahean" target="_blank" rel="noopener">Message us on Messenger</a></li></ul></div>
 <div><h4>Follow us</h4><div class="social"><a href="https://www.facebook.com/garahean/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://m.me/garahean" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a></div><p style="margin-top:16px">Dine-in · In-store pickup · Party trays</p></div></div>
-<div class="copy">© Garahean Diners. All rights reserved. · garahean.brspl.fyi</div></footer>
+<div class="copy">© Garahean Diners. All rights reserved. · garahean.bacolod.fyi</div></footer>
 <div class="lightbox" id="lb"><img alt=""></div>
 <script is:inline src="js/main.js"></script>
 </body>

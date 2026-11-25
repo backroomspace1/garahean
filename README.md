@@ -1,6 +1,6 @@
 # Garahean Diners website
 
-Website for Garahean Diners, a home-style Filipino diner on Nueva Street, Brgy. 11, Bacolod City. Built with [Astro](https://astro.build) as a static site. Plain CSS and a little JavaScript, no UI framework. Live domain: https://garahean.brspl.fyi
+Website for Garahean Diners, a home-style Filipino diner on Nueva Street, Brgy. 11, Bacolod City. Built with [Astro](https://astro.build) as a static site. Plain CSS and a little JavaScript, no UI framework. Live domain: https://garahean.bacolod.fyi
 
 ## Run it
 You need Node.js 22.23.4 or newer (Astro 7 requires it).
@@ -30,7 +30,7 @@ npm run preview  # serves the built dist/ folder
    - Serving mode: **Static build**
    - Web root / output directory: **`dist`**
 4. Turn on **Auto-deploy on push** so every push to `main` redeploys.
-5. Add the domain `garahean.brspl.fyi`, point its DNS (A record or CNAME) at the xCloud server, and enable the free SSL certificate.
+5. Add the domain `garahean.bacolod.fyi`, point its DNS (A record or CNAME) at the xCloud server, and enable the free SSL certificate.
 
 ## To check before launch
 - Opening hours and prices were not on Facebook; the site asks visitors to call or check Facebook.

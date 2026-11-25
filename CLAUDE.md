@@ -10,7 +10,7 @@ Static site for Garahean Diners, a home-style Filipino diner in Bacolod City. Bu
 
 ## Deploy
 - xCloud (xcloud.host) Git-deployed Astro site: Node 22, build `npm run build`, Serving mode "Static build", Web root `dist`, branch `main`, auto-deploy on push.
-- Live domain: https://garahean.brspl.fyi (`site` in `astro.config.mjs`).
+- Live domain: https://garahean.bacolod.fyi (`site` in `astro.config.mjs`).
 
 ## Styling
 - All in `public/css/style.css`; tokens: gold #E0B43A, charcoal #1D1B19, cream #FBF5E6, red #B3261E.
